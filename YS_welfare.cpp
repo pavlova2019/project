@@ -25,7 +25,6 @@ int get_next(int num){
 		}
 		now[item] = num;
 		util[num-1] = n-1 - i;
-		//cout << num << ' ' << item << '\n';
 		break;
 	}
 	return st;
@@ -43,7 +42,6 @@ int get_next_2(int num){
 			}
 			now[item] = num;
 			util[num-1] = n-1 - i;
-			//cout << num << ' ' << item << '\n';
 			f = 0;
 			break;
 		}
@@ -59,7 +57,6 @@ int get_next_2(int num){
 		}
 		now[item] = num;
 		util[num-1] = n-1 - it;
-		//cout << num << ' ' << item << '\n';
 	}
 	return st;
 }
@@ -93,7 +90,6 @@ void init(bool f){
 }
 
 int main() {
-	//for (int i=0;i<n;i++) order[i] = i+1;
 	set <int> s;
 	double ys = 0, s2 = 0;
 	while (s.size() < 24){
@@ -122,26 +118,6 @@ int main() {
 		int sum_2 = 0;
 		for (int i=0;i<n;i++) sum_2 += util[i];
 		s2 += (sum_2 + 0.0);
-		/*cout << "ord: ";
-		for (int i=0;i<n;i++) cout << order[i] << ' ';
-		cout << '\n';
-		YS(0, 0);
-		int sum = 0;
-		cout << "YS:  ";
-		for (int i=0;i<n;i++) {
-			cout << util[i] << ' ';
-			sum += util[i];
-		}
-		cout << "\ntotal utility = " << sum << '\n';
-		init(0);
-		S2(0, 0);
-		sum = 0;
-		cout << "S2:  ";
-		for (int i=0;i<n;i++) {
-			cout << util[i] << ' ';
-			sum += util[i];
-		}
-		cout << "\ntotal utility = " << sum << '\n' << "***********\n";*/
 	}
 	cout << "The arithmetic mean of total utilities for YS: " << ys/24 << '\n';
 	cout << "The arithmetic mean of total utilities for S2: " << s2/24 << '\n';
